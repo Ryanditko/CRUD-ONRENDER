@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD TURMA</title>
+    <link rel="stylesheet" href="style.css"> <!-- Link para o CSS global -->
+    <script src="script.js" defer></script> <!-- Link para o JavaScript -->
+</head>
+<body>
+    <button onclick="window.location.href='index.html'" style="margin-bottom: 20px;">Voltar para a Página Principal</button>
+    
+    <h1>CRUD SCHOOL</h1>
+    
+    <section id="turmasForm">
+        <form id="turmasForm">
+            <label for="nome_turma">Nome da Turma:</label>
+            <input type="text" id="nome_turma" name="nome" required placeholder="Digite o nome da turma">
+    
+            <label for="ano">Ano/Série:</label>
+            <select id="ano" name="ano" required>
+                <option value="">Selecione o ano/série</option>
+                <option value="1">1º Ano</option>
+                <option value="2">2º Ano</option>
+                <option value="3">3º Ano</option>
+            </select>
+    
+            <label for="professor_responsavel">Professor Responsável:</label>
+            <input type="text" id="professor_responsavel" name="professor" required placeholder="Digite o nome do professor">
+    
+            <button type="submit">Cadastrar Turma</button>
+        </form>
+    </section>
+</body>
+</html>

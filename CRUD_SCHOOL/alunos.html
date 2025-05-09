@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD ALUNO</title>
+    <link rel="stylesheet" href="style.css"> <!-- Link para o CSS global -->
+    <script src="script.js" defer></script> <!-- Link para o JavaScript -->
+</head>
+<body>
+    <button onclick="window.location.href='index.html'" style="margin-bottom: 20px;">Voltar para a Página Principal</button>
+    
+    <h1>CRUD SCHOOL</h1>
+    
+    <section id="alunosForm">
+        <form id="alunosForm">
+            <input type="hidden" id="nome_aluno">
+            <label for="nome_aluno">Nome do Aluno:</label>
+            <input type="text" id="nome_aluno" name="nome" required placeholder="Digite o seu nome">
+    
+            <label for="email_aluno">Email do Aluno:</label>
+            <input type="email" id="email_aluno" name="email" required placeholder="Digite o seu email">
+    
+            <label for="data_nascimento">Data de Nascimento:</label>
+            <input type="date" id="data_nascimento" name="data_nascimento" required>
+    
+            <!-- <label for="turma">Turma:</label> 
+            <select id="turma" name="turma" required>
+                <option value="">Selecione a turma</option>
+                <option value="turma1">Turma 1</option>
+                <option value="turma2">Turma 2</option>
+                <option value="turma3">Turma 3</option>
+            </select>  -->
+    
+            <label for="notas">Suas notas no semestre:</label>
+            <input type="text" id="nota_1" name="notas" placeholder="Nota 1">
+            <input type="text" id="'nota_2" placeholder="Nota 2">
+            <input type="submit"> 
+        </form>
+    </section>
+    <script type ='module' src="./js/alunos/index-alunos.js"></script>
+</body>
+</html> 

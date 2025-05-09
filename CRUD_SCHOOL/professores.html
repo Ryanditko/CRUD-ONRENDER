@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD PROFESSOR</title>
+    <link rel="stylesheet" href="style.css"> <!-- Link para o CSS global -->
+    <script src="script.js" defer></script> <!-- Link para o JavaScript -->
+</head>
+<body>
+    <button onclick="window.location.href='index.html'" style="margin-bottom: 20px;">Voltar para a Página Principal</button>
+    
+    <h1>CRUD SCHOOL</h1>
+    
+    <section id="professoresForm">
+        <form id="professoresForm">
+            <label for="nome_professor">Nome do Professor:</label>
+            <input type="text" id="nome_professor" name="nome" required placeholder="Digite o seu nome">
+    
+            <label for="email_professor">Email do Professor:</label>
+            <input type="email" id="email_professor" name="email" required placeholder="Digite o seu email">
+    
+            <label for="disciplina">Disciplina:</label>
+            <input type="text" id="disciplina" name="disciplina" required placeholder="Digite a disciplina">
+    
+            <label for="telefone_professor">Telefone:</label>
+            <input type="text" id="telefone_professor" name="telefone" placeholder="Digite seu telefone">
+    
+            <button type="submit">Cadastrar Professor</button>
+        </form>
+    </section>
+</body>
+</html>
