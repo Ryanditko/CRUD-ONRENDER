@@ -1,4 +1,12 @@
-async function getAlunos() {
+const apiAlunos = {
+    async getAlunos() {
+        const api = await fetch("https://school-system-spi.onrender.com/api/alunos/");
+        const response = await api.json();
+        console.log(response);
+        return response;
+    },
+    
+async  getAlunos() {
     try {
       const api = await fetch("https://school-system-spi.onrender.com/api/alunos/");
       const response = await api.json();
@@ -8,9 +16,20 @@ async function getAlunos() {
       alert("Erro ao buscar alunos");
       console.error(error);
     }
-  }
+  },
 
-async function getAluno_id(id_aluno) {
+  async  getAlunos() {
+    try {
+      const api = await fetch("https://school-system-spi.onrender.com/api/alunos/");
+      const response = await api.json();
+      console.log(response);
+      return response;
+    } catch (error) {
+      alert("Erro ao buscar alunos");
+      console.error(error);
+    }
+  },
+  async  getAluno_id(id_aluno) {
     try {
         const api = await fetch(`https://school-system-spi.onrender.com/api/alunos/${id_aluno}`);
         const response = await api.json();
@@ -20,9 +39,8 @@ async function getAluno_id(id_aluno) {
         alert("Erro ao buscar aluno");
         console.error(error);
     }
-}
-
-async function postAluno(aluno) {
+},
+async  postAluno(aluno) {
     try {
         const api = await fetch(`https://school-system-spi.onrender.com/api/alunos`, { 
             method: "POST",
@@ -38,9 +56,8 @@ async function postAluno(aluno) {
         alert("Erro ao cadastrar aluno");
         console.error(error);
     }
-} 
-
-async function updateAluno(id, aluno) {
+} ,
+async  updateAluno(id, aluno) {
     try {
         const api = await fetch(`https://school-system-spi.onrender.com/api/alunos/${id}`,  {
             method: "PUT",
@@ -56,9 +73,11 @@ async function updateAluno(id, aluno) {
         alert("Erro ao atualizar aluno");
         console.error(error);
     }
-} 
+} ,
 
-async function deleteAluno(id_aluno) {
+
+
+async  deleteAluno(id_aluno) {
     try {
         const api = await fetch(`https://school-system-spi.onrender.com/api/alunos/${id_aluno}`, {
             method: "DELETE"
@@ -72,3 +91,8 @@ async function deleteAluno(id_aluno) {
     }
 }
 
+}
+
+
+
+export default apiAlunos;

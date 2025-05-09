@@ -1,6 +1,5 @@
-import postAluno from '../alunos/alunos.js'
 
-
+import apiAlunos from "../alunos/alunos.js"
 // criando as variaveis que irão receber os danos cadastrados na seção aluno
 const formulario = document.getElementById('alunosForm')
 const input_Nome_aluno = document.getElementById('nome_aluno')
@@ -20,8 +19,8 @@ formulario.addEventListener('submit', async (events) => {
         nota_1: input_Nota1.value, 
         nota_2: input_Nota2.value, 
     }
-criar_Aluno(aluno);
-postAluno(aluno); 
+    criar_Aluno(aluno);
+    postAluno(aluno); 
 
 } )
 
@@ -36,5 +35,16 @@ function criar_Aluno(aluno) {
                     <th>${media}</th>
                    
                 </tr>` 
+                console.log(aluno)
 }
 
+async function visualizar_Aluno() {
+    let alunos = await apiAlunos.getAlunos(); 
+    console.log(alunos)
+    alunos.forEach(aluno => { 
+        criarAluno(aluno)
+    });
+}
+
+
+visualizar_Aluno(); 
